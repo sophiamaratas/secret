@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gift!</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        background-color: #789FCC;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .giftcontainer{
+        position: relative;
+        top: 500px;
+        left: -110px;
+    }
+
+    .giftcontainer::before{
+        content: '';
+        position: absolute;
+        width: 270px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        left: -30px;
+    }
+
+    .gift{
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        background-color: #bf8bff;
+        left: -20px;
+        top: -174px;
+    }
+
+    .gift::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 200px;
+        background-color: #ffce00;
+        left: 100px;
+    }
+
+    .gift::after{
+        content: '';
+        position: absolute;
+        box-shadow: inset 0 20px rgba(0, 0, 0, 0.3);
+        width: 250px;
+        height: 200px;
+        left: -0px;
+        top: 30px;
+    }
+
+    #click{
+       display: none;
+    }
+
+    .click{
+        position: absolute;
+        background-color: #bf8bff;
+        width: 290px;
+        height: 70px;
+        top: -40px;
+        left: -21px;
+        transform-origin: bottom left;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .click::before{
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 80px;
+        background-color: #ffce00;
+        left: 121px;
+    }
+
+    .click::after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 0;
+        border-bottom: 30px solid #ffce00;
+        border-top: 30px solid #ffce00;
+        border-left: 0px solid transparent;
+        border-right: 30px solid transparent;
+        transform: rotate(-90deg);
+        left: 125px;
+        top: -49px;
+    }
+
+    #click:checked+.click{
+        transform: rotate(-110deg) scale(0.85);
+    }
+
+    #click:checked~.wishes{
+        transform: translateY(-120px);
+    }
+
+    .wishes{
+        position: absolute;
+        transition: .5s;
+        color: #333;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: -1;
+        left: 10px;
+        color: #ffff;
+        text-shadow: 0 0 10px #020202;
+    }
+
+</style>
+<body>
+    <div class="giftcontainer">
+        <div class="gift">
+            <input type="checkbox" id="click">
+            <label for="click" class="click"></label>
+            <div class="wishes">You may now open the gift po</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+   
+body{
+    background-color: #F4C2C2;
+    height: 100vh;
+}
+
+.img1{
+    mix-blend-mode: multiply;
+    margin-left: 850px;
+    margin-top: 70px;
+    height: 600px;
+    width: 500px;
+    animation: slideInImage 2s ease-out forwards;
+    transform: translateY(100px);
+}
+
+@keyframes slideInImage {
+    from {
+        transform: translateY(100px); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to final position */
+        opacity: 1;
+    }
+}
+
+h1 {
+    position: absolute;
+    display: block;
+    font-size: 30px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 72px;
+    color: #2B343B !important;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    margin-left: 200px;
+    margin-top: 200px;
+    animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to final position */
+        opacity: 1;
+    }
+}
+
+h2{
+    text-transform: uppercase;
+    position: absolute;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-size: 20px;
+    color: #2B343B !important;
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    margin-left: 205px;
+    margin-top: 170px;
+    animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to final position */
+        opacity: 1;
+    }
+}
+
+/* button */  
+button {
+  font-weight: bold;
+  color: white;
+  background-color: #171717;
+  padding: 1em 2em;
+  border: none;
+  border-radius: .6rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  right: 1120px;
+  top: -90px;
+  animation: slideInImage 2s ease-out forwards;
+  transform: translateY(100px);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Move to final position */
+        opacity: 1;
+    }
+}
+
+button:hover{
+    background-color: #592986;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* scroll down */
+.container {
+      display: flex;
+      margin-top: 100px; 
+    }
+
+    .color-1 {
+      background-color: #644A8E;
+      width: 33.33%;
+      padding: 20px;
+      height: 740px;
+    }
+
+    .color-2 {
+      background-color: #e24256; 
+      width: 33.33%;
+      padding: 20px;
+      height: 740px;
+    }
+
+    .color-3 {
+      background-color: #789FCC; 
+      width: 33.33%;
+      padding: 20px;
+      height: 740px;
+    }
+
+/* images */
+.img2{
+    margin-top: 90px;
+    position: absolute;
+    justify-content: center;
+    margin-left: 80px;
+    height: 350px;
+    width: 350px;
+}
+
+.img3{
+   position: absolute;
+   width: 380px;
+   height: 380px;
+   margin-top: 81px;
+   justify-content: center;
+   margin-left: 35px;
+}
+
+.img4{
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    margin-top: 42px;
+    margin-left: 15px;
+    justify-content: center;
+}
+
+/* gift button */ 
+.button1 {
+  position: absolute; 
+  top: 190%; 
+  right: 192px; 
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}   
+
+.button1:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+
+/* letter button */
+.button2 {
+  position: absolute; 
+  top: 190%; 
+  right: 700px; 
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}   
+
+.button2:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+/* cake button */
+.button3 {
+  position: absolute; 
+  top: 190%; 
+  right: 1230px;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}   
+
+.button3:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+} 
+
+.white-section {
+  background-color: white;
+  height: 740px; 
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+ 
+.fancy {
+justify-content: center;
+ background-color: transparent;
+ border: 2px solid #000;
+ border-radius: 0;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ float: right;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 1.25em 2em;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+ text-transform: none;
+ transition: all 0.3s ease-in-out;
+ user-select: none;
+ font-size: 13px;
+}
+
+.fancy::before {
+ content: " ";
+ width: 1.5625rem;
+ height: 2px;
+ background: black;
+ top: 50%;
+ left: 1.5em;
+ position: absolute;
+ transform: translateY(-50%);
+ transform-origin: center;
+ transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+ font-size: 1.125em;
+ line-height: 1.33333em;
+ padding-left: 2em;
+ display: block;
+ text-align: left;
+ transition: all 0.3s ease-in-out;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: black;
+}
+
+.fancy .top-key {
+ height: 2px;
+ width: 1.5625rem;
+ top: -2px;
+ left: 0.625rem;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+ height: 2px;
+ width: 1.5625rem;
+ right: 1.875rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+ height: 2px;
+ width: 0.625rem;
+ right: 0.625rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+ color: white;
+ background: black;
+}
+
+.fancy:hover::before {
+ width: 0.9375rem;
+ background: white;
+}
+
+.fancy:hover .text {
+ color: white;
+ padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+ left: -2px;
+ width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+ right: 0;
+ width: 0;
+}
+
+</style>
+<body>
+    <h1 class="animate-text">happy <br>
+        birthday!</h1>
+    <h2>Hi Love,</h2>
+    <img src="img/1.avif" class="img1" alt="1">
+
+   <button id="scrollBtn">Click here</button>
+
+
+    <div class="container" id="color-sections">
+        <div class="color-1">
+          <img src="img/4.webp" class="img4" alt="">
+         <button class="button3" onclick="location.href='cake.html'">
+            <span class="button-content">OPEN</span>
+          </button>
+        </div>
+    
+        <div class="color-2">
+            <img src="img/2.webp" class="img2" alt="">
+            <button class="button2" onclick="location.href='letter.html'">
+              <span class="button-content">OPEN</span>
+            </button>
+        </div>
+    
+        <div class="color-3">
+            <img src="img/3.png" class="img3" alt="">
+        <button class="button1" onclick="location.href='gift.html'">
+        <span class="button-content">OPEN</span>
+        </button>
+        </div>
+      </div>
+
+      <div class="white-section"> 
+      <a class="fancy" href="flowers.html">
+      <span class="top-key"></span>
+      <span class="text">CLICK ME FOR A SURPRISE!</span>
+      <span class="bottom-key-1"></span>
+       <span class="bottom-key-2"></span>
+      </a>
+    </div>
+
+      <script>
+        const scrollBtn = document.getElementById('scrollBtn');
+        const colorSections = document.getElementById('color-sections');
+    
+        scrollBtn.addEventListener('click', () => {
+          colorSections.scrollIntoView({ behavior: 'smooth' }); 
+        });
+      </script>
+</body>
+</html>

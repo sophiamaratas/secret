@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Message!</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #e24256;
+}
+
+.card{
+    width: 690px;
+    height: 500px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.card:hover .outside{
+    transform: rotateY(-135deg);
+}
+
+.outside,
+.inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+}   
+
+.inside {
+  background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
+  padding: 10px 20px; 
+  text-align: left;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  width: 50%; 
+  height: 100%; 
+}
+
+.inside p {
+  margin: 1px 0; 
+}
+
+.outside{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+
+.front{
+    background-color: #ffffff;
+}
+
+.back{
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e0e0e0, #ffffff 30%);
+}
+
+.cake{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+}
+
+.top-layer,
+.mid-layer,
+.bottom-layer {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px, 
+        #b583c9 50px,
+        #b583c9 60px,
+        transparent 60px
+    ),
+    radial-gradient(
+        circle at 30px 5px,
+        #592986 30px,
+        #c3b4e5 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+}
+
+.mid-layer{
+    transform: scale(0.85);
+    top: 6px;
+}
+
+.top-layer{
+    transform: scale(0.7);
+    top: 26px;
+}
+
+.candle{
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+        45deg,
+        #592986 0,
+        #592986 5px,
+        #c3b4e5 5px,
+        #c3b4e5 10px
+    );
+position: absolute;
+margin: auto;
+left: 0;
+right: 0;
+bottom: 202px;
+}
+
+.candle:before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+.outside p{
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: black;
+}
+
+</style>
+<body>
+    <!-- Card -->
+    <div class="card">
+        <div class="outside">
+            <div class="front"> 
+             <p>Happy Birthday <br>
+                my love!</p>
+                <div class="cake">
+                <div class="top-layer"></div>
+                <div class="mid-layer"></div>
+                <div class="bottom-layer"></div>
+                <div class="candle"></div>
+                </div>
+            </div>
+            <div class="back"></div>
+        </div>
+        <main id="happy birthday"></main>
+        <div class="inside">
+            <p>Happy birthday, my love. I am very happy that I met someone like you; to be honest, I didn't expect that we would be in a relationship because you know what happened, but I'm so happy that you gave me the last chance to prove to you that I really love you. But anyways, I just want you to know that I am very lucky to have a girlfriend like you. <br>
+                <br>
+                Our relationship is not perfect; I know it's tiring and draining because of our pride, but please don't give up on us, and let's continue to grow together. I know that we're not that type of person who shares their feelings; if we have problems sometimes, we don't share them. But it's okay; I'm not forcing you to tell me your problems. But I am always here for you, always. <br>
+                <br>
+                I just want to let you know that I am so proud of you for doing your best in life. I hope that you know how proud I am. I know that being consistent with your grades isn't easy, but don't pressure yourself too much; you also need rest. Your best is good enough, and I hope you'll keep fighting until you reach your dreams. No matter how hard our life is, never give up, okay? I'm here for you, and let's help each other because you're my only kakampi and I'm your kakampi too. <br>
+                <br>
+                Once again, happy birthday, my love. I'm so lucky to have you in my life, and I'm also thankful because your patience with me is wow talaga, even though I'm stubborn sometimes, sorry po sa kakulitan ko hehe. I hope that you'll continue to reach your dreams, and don't forget that I am here supporting you. Let's not give up on each other no matter what happens, and let's just hope na matanggap nila tayo. Let's be successful together po. I love you so much, my love. Enjoy your day!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
